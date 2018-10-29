@@ -1,7 +1,10 @@
 /*
- * Create a list that holds all of your cards
+ * cards node list
  */
-
+ let cards = document.querySelectorAll('.card');
+    cards.forEach(card => card.addEventListener('click',function(){
+        card.classList.add('open','show')
+    }));
 
 /*
  * Display the cards on the page
