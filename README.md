@@ -1,20 +1,10 @@
-# Memory Game Project
+**Instructions to Play the Memory Game**
 
-## Table of Contents
-
-* [Instructions](#instructions)
-* [Contributing](#contributing)
-
-## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+1. Start the game by clicking any of the cards.
+1. The timer stars.
+1. You have to complete the game below five minutes by matching all the cards. Other wise you lost the game.
+1. Don't worry you can play the game again.
+1. Play the game till you win it.
+1. Once you win(matched all pair of cards),you will a congratulation popup with your time,moves and rating.
+1. Next time you paly the after winning, all the cards shuffle among themselves to make game more complex.
+1. Play game now!.
