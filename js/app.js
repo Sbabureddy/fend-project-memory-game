@@ -52,6 +52,7 @@ function isMatched(){
         else{
             setTimeout(function(){
                 $('#exampleModal').modal('show');
+                gamveOverModal();
             },300000);
             
         }
@@ -147,6 +148,7 @@ function gameOver(){
     setTimeout(function(){
         modalBody();
         $('#exampleModal').modal('hide');
+        
     },1000)
 }
 //modal body for congratulation popup
@@ -159,6 +161,12 @@ function modalBody(){
     elapsedTime.innerHTML = `Time = ${clockTime}`;
     noOfMoves.innerHTML = ` ${moves} Moves`;
     avgStar.innerHTML = ` ${stars} Stars`;
+}
+// gameover modal popup
+function gamveOverModal(){
+    document.querySelector('#exampleModalLabel').innerHTML = 'Try Again?';
+    document.querySelector('#updatedBodyText').innerHTML = 'You Lost the Game! Do you want to Play Again?';
+
 }
 //reset time
 function resetClockAndTime(){
@@ -177,9 +185,9 @@ function resetGame(){
     resetClockAndTime();
     resetMoves();
     resetStars();
-    shuffleDeck();
     $('#exampleModal').modal('hide')
     resetCards();
+    shuffleDeck();
 }
 // replay button 
 function replayGame(){
@@ -213,6 +221,7 @@ function resetCards(){
     }
 }
 
-
-const resetbtn = document.querySelector('.modal_replay').addEventListener('click',resetGame);
-const replaybtn = document.querySelector('.restart').addEventListener('click',replayGame);
+// modal reset button
+const resetbtn = document.querySelector('.modal_replay').addEventListener('click', replayGame);
+//
+const replaybtn = document.querySelector('.restart').addEventListener('click', resetGame);
