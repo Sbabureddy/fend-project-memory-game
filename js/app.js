@@ -43,9 +43,11 @@ function isMatched(){
         toggledCards = [];
         matched++;
         if(matched === 8){
-            modalBody();
-            $('#exampleModal').modal('show');
-            resetCards();
+            setTimeout(function(){
+                modalBody();
+                $('#exampleModal').modal('show');
+                resetCards();
+            },1000)
         }
         else{
             setTimeout(function(){
@@ -142,8 +144,10 @@ function stopClock(){
 // game over here
 function gameOver(){
     stopClock();
-    modalBody();
-    $('#exampleModal').modal('hide');
+    setTimeout(function(){
+        modalBody();
+        $('#exampleModal').modal('hide');
+    },1000)
 }
 //modal body for congratulation popup
 function modalBody(){
@@ -153,8 +157,8 @@ function modalBody(){
     const avgStar = document.querySelector('.modal_stars');
     const stars = getStars();
     elapsedTime.innerHTML = `Time = ${clockTime}`;
-    noOfMoves.innerHTML = `Moves = ${moves}`;
-    avgStar.innerHTML = `Stars = ${stars}`;
+    noOfMoves.innerHTML = ` ${moves} Moves`;
+    avgStar.innerHTML = ` ${stars} Stars`;
 }
 //reset time
 function resetClockAndTime(){
